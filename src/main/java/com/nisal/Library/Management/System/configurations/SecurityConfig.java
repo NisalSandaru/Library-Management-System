@@ -1,4 +1,4 @@
-package com.nisal.Library.Management.System.config;
+package com.nisal.Library.Management.System.configurations;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;
