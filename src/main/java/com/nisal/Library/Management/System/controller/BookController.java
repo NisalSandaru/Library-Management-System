@@ -20,12 +20,6 @@ import java.util.List;
 public class BookController {
     private final BookService bookService;
 
-    @PostMapping
-    public ResponseEntity<BookDTO> createBook(@Valid BookDTO bookDTO) throws BookException {
-        BookDTO createdBook = bookService.createBook(bookDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdBook);
-    }
-
     @PostMapping("/bulk")
     public ResponseEntity<List<BookDTO>> createBooksBulk(@Valid List<BookDTO> bookDTOS) throws BookException {
         List<BookDTO> createdBook = bookService.createBooksBulk(bookDTOS);
